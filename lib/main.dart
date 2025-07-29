@@ -2,6 +2,7 @@
 
 import 'package:app_leitura/Screens/tela_arquivos.dart';
 import 'package:app_leitura/Screens/tela_leitura.dart';
+import 'package:app_leitura/Screens/tela_navigation.dart';
 import 'package:app_leitura/Screens/tela_perfil.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: TelaPerfil(),
+      home: TelaNavegar(),
     );
   }
 }

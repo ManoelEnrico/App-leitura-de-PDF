@@ -11,7 +11,7 @@ class TelaLeitura extends StatelessWidget {
     double tamanhoH = 200;
 
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Colors.lightBlue[200],
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
         child: Column(
@@ -35,7 +35,7 @@ class TelaLeitura extends StatelessWidget {
 
 criarTela() {
   return ListView.builder(
-    itemCount: 3,
+    itemCount: 5,
     itemBuilder: (context, index) {
       return Row(
         children: [
@@ -50,4 +50,3 @@ criarTela() {
     },
   );
 }
-

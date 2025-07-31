@@ -40,8 +40,6 @@ class _TelaNavegarState extends State<TelaNavegar> {
           BottomNavigationBarItem(
               icon: Icon(Icons.read_more), label: "Arquivos"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.picture_as_pdf), label: "Adicionar"),
-          BottomNavigationBarItem(
               icon: Icon(Icons.account_circle), label: "Perfil"),
         ],
       ),

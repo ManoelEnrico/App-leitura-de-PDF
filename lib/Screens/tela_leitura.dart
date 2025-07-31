@@ -12,11 +12,15 @@ class TelaLeitura extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.lightBlue[200],
-      body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
-        child: Column(
-          children: [
-            Center(
+      body: //Container(
+//        padding: EdgeInsets.only(left: 30, right: 30, top: 37, bottom: 20),
+          // child:
+          Stack(
+        children: [
+          Positioned.fill(
+            top: 35,
+            child: Align(
+              alignment: Alignment.topCenter,
               child: Text(
                 "Seus Arquivos",
                 style: TextStyle(
@@ -25,28 +29,70 @@ class TelaLeitura extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(child: criarTela()),
-          ],
-        ),
+          ),
+          Positioned(
+            top: 80,
+            bottom: 5,
+            left: 1,
+            right: 1,
+            child: criarTela(),
+          ),
+          Positioned.fill(
+            bottom: 10,
+            top: 560,
+            left: 310,
+            child: criarButtom(),
+          ),
+        ],
       ),
+      //     ),
     );
   }
 }
 
 criarTela() {
-  return ListView.builder(
-    itemCount: 5,
-    itemBuilder: (context, index) {
-      return Row(
-        children: [
-          Expanded(
-            child: CardPDF(),
+  return SizedBox(
+    height: 520,
+    width: 500,
+    child: ListView.builder(
+      itemCount: 5,
+      itemBuilder: (context, index) {
+        return Container(
+          padding: EdgeInsets.symmetric(horizontal: 30),
+          child: Row(
+            children: [
+              Expanded(
+                child: CardPDF(),
+              ),
+              Expanded(
+                child: CardPDF(),
+              ),
+            ],
           ),
-          Expanded(
-            child: CardPDF(),
-          ),
-        ],
-      );
-    },
+        );
+      },
+    ),
   );
 }
+
+criarButtom() {
+  return Container(
+    height: 60,
+    width: 60,
+    decoration: BoxDecoration(
+      shape: BoxShape.circle,
+      color: Colors.lightBlue[100],
+    ),
+    child: IconButton(
+      onPressed: () {
+        
+      },
+      icon: Icon(
+        Icons.add,
+        size: 40,
+        color: Colors.blue[900],
+      ),
+    ),
+  );
+}
+
